@@ -906,3 +906,94 @@ footer {
     background: #ffffff;
   }
 }
+/* Mobile width fix: keep agenda day tabs inside phone screen */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.agenda-shell,
+.day-sidebar,
+.agenda-main,
+.agenda-panel,
+.day-section,
+.session-list {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.agenda-summary,
+.session-card {
+  min-width: 0;
+}
+
+.day-tabs button span,
+.day-tabs button strong,
+.session-main h4,
+.session-main p,
+.session-meta,
+.session-notes {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 1060px) {
+  .agenda-shell {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .day-sidebar {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .day-tabs {
+    position: static;
+    display: flex;
+    width: 100%;
+    max-width: calc(100vw - 64px);
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+  }
+
+  .day-tabs button {
+    flex: 0 0 clamp(132px, 42vw, 190px);
+    min-width: 0;
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 560px) {
+  .overview-band,
+  .agenda-section,
+  .routes-section,
+  .logistics-section,
+  .contact-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .agenda-tools,
+  .agenda-shell,
+  .section-heading {
+    max-width: 100%;
+  }
+
+  .day-tabs {
+    max-width: calc(100vw - 28px);
+  }
+
+  .session-card,
+  .agenda-summary {
+    width: 100%;
+  }
+}
