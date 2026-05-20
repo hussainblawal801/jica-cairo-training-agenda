@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JICA Cairo Transport Strategy Japan Training</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Training program home">
+        <span>JICA</span>
+        <strong data-i18n="brand">Cairo Transport Strategy Training</strong>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#overview" data-i18n="navOverview">Overview</a>
+        <a href="#agenda" data-i18n="navAgenda">Agenda</a>
+        <a href="#routes" data-i18n="navRoutes">Study Routes</a>
+        <a href="#logistics" data-i18n="navLogistics">Logistics</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="language-switcher" aria-label="Language selector">
+        <button class="active" type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ja">日本語</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Japan training program">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">June 16-28, 2026 | Japan program</p>
+          <h1 data-i18n="heroTitle">JICA Japan Training for the Greater Cairo Transport Strategy Project</h1>
+          <p class="hero-text" data-i18n="heroText">
+            A working agenda for the project on transport infrastructure strategy in the Greater Cairo metropolitan area
+            and surrounding regions, built from the official training schedule workbook.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#agenda" data-i18n="openAgenda">Open Agenda</a>
+            <button class="secondary-link" type="button" id="printBtn" data-i18n="printProgram">Print Program</button>
+          </div>
+        </div>
+        <div class="countdown" aria-label="Program countdown">
+          <span id="countdownValue">--</span>
+          <strong id="countdownLabel">days to departure</strong>
+        </div>
+      </section>
+
+      <section id="overview" class="overview-band">
+        <div class="event-facts" aria-label="Program facts">
+          <article>
+            <span data-i18n="factDatesLabel">Program Window</span>
+            <strong data-i18n="factDatesValue">June 16-28, 2026</strong>
+          </article>
+          <article>
+            <span data-i18n="factGroupLabel">Delegation</span>
+            <strong data-i18n="factGroupValue">15 participants from the Greater Cairo transport strategy project</strong>
+          </article>
+          <article>
+            <span data-i18n="factBaseLabel">Training Base</span>
+            <strong data-i18n="factBaseValue">JICA Tokyo with field visits in Tokyo, Kanagawa, and Chiba</strong>
+          </article>
+          <article>
+            <span data-i18n="factFocusLabel">Focus</span>
+            <strong data-i18n="factFocusValue">Metropolitan transport planning, TOD, rail corridors, and smart-city practice</strong>
+          </article>
+        </div>
+
+        <div class="overview-grid">
+          <section>
+            <p class="section-kicker" data-i18n="purposeKicker">Program Purpose</p>
+            <h2 data-i18n="purposeTitle">Translate Japanese urban transport practice into options for Greater Cairo.</h2>
+            <p data-i18n="purposeText">
+              The program combines lectures, site visits, discussions, and project workshops. Its focus is integrated
+              land-use and transport planning, metropolitan policy, transit-oriented development, corridor development,
+              smart-city operations, financing approaches, and follow-up action planning for the Cairo transport strategy
+              project.
+            </p>
+          </section>
+          <section class="outcomes">
+            <h2 data-i18n="outputsTitle">Expected Outputs</h2>
+            <ul>
+              <li data-i18n="output1">Shared understanding of Japan's metropolitan planning and transport policy tools.</li>
+              <li data-i18n="output2">Practical lessons from Tokyo, Yokohama, Tokyu corridor, Tsukuba Express, and Kashiwa-no-ha.</li>
+              <li data-i18n="output3">Project discussion notes with PCKK and JICA teams.</li>
+              <li data-i18n="output4">Three team presentations summarizing lessons and application ideas.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="focus-strip" aria-label="Training focus areas">
+        <article>
+          <span>01</span>
+          <h3 data-i18n="focus1Title">Metropolitan Policy</h3>
+          <p data-i18n="focus1Text">National, regional, and Tokyo metropolitan planning systems.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3 data-i18n="focus2Title">TOD and Rail Corridors</h3>
+          <p data-i18n="focus2Text">Station-centered development, suburban growth, and railway-led area management.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-i18n="focus3Title">Implementation Finance</h3>
+          <p data-i18n="focus3Text">Public-private coordination, station integration, and cost reduction cases.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3 data-i18n="focus4Title">Project Application</h3>
+          <p data-i18n="focus4Text">Workshops link Japanese lessons to the Greater Cairo strategy project.</p>
+        </article>
+      </section>
+
+      <section id="agenda" class="agenda-section">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="agendaKicker">Interactive Agenda</p>
+          <h2 data-i18n="agendaTitle">Daily program</h2>
+          <p data-i18n="agendaText">
+            Select a day, filter by activity type, or search for a venue, lecturer, route, or topic.
+          </p>
+        </div>
+
+        <div class="agenda-tools" aria-label="Agenda tools">
+          <label class="search-box">
+            <span data-i18n="searchLabel">Search agenda</span>
+            <input id="agendaSearch" type="search" placeholder="Try TOD, JICA HQ, Tokyo, workshop..." data-i18n-placeholder="searchPlaceholder" />
+          </label>
+          <div class="filter-buttons" role="group" aria-label="Activity filters">
+            <button class="active" type="button" data-filter="all" data-i18n="filterAll">All</button>
+            <button type="button" data-filter="lecture" data-i18n="filterLectures">Lectures</button>
+            <button type="button" data-filter="visit" data-i18n="filterVisits">Visits</button>
+            <button type="button" data-filter="workshop" data-i18n="filterWorkshops">Workshops</button>
+            <button type="button" data-filter="move" data-i18n="filterTravel">Travel</button>
+            <button type="button" data-filter="logistics" data-i18n="filterLogistics">Logistics</button>
+          </div>
+        </div>
+
+        <div class="agenda-shell">
+          <aside class="day-sidebar" aria-label="Training days">
+            <div id="dayTabs" class="day-tabs" role="tablist" aria-label="Program days"></div>
+          </aside>
+          <div class="agenda-main">
+            <div id="agendaStats" class="agenda-stats" aria-live="polite"></div>
+            <div id="agendaPanel" class="agenda-panel" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="routes" class="routes-section">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="routesKicker">Study Routes</p>
+          <h2 data-i18n="routesTitle">Field learning sequence</h2>
+          <p data-i18n="routesText">
+            The agenda links classroom policy topics with observed urban transport corridors and development districts.
+          </p>
+        </div>
+        <div class="route-grid">
+          <article>
+            <span data-i18n="route1Label">Tokyo</span>
+            <h3 data-i18n="route1Title">Government and project coordination</h3>
+            <p data-i18n="route1Text">JICA Tokyo, Tokyo Metropolitan Government, JICA Headquarters, PCKK, and the Egyptian Embassy in Japan.</p>
+          </article>
+          <article>
+            <span data-i18n="route2Label">Tokyu Corridor</span>
+            <h3 data-i18n="route2Title">Railway-led suburban development</h3>
+            <p data-i18n="route2Text">Tokyu headquarters, Futako-Tamagawa TOD, and Tama-Plaza TOD as examples of station-area development.</p>
+          </article>
+          <article>
+            <span data-i18n="route3Label">Yokohama</span>
+            <h3 data-i18n="route3Title">Integrated rail and waterfront development</h3>
+            <p data-i18n="route3Text">Minatomirai Line, station-building integration, and Yokohama Air Cabin field observation.</p>
+          </article>
+          <article>
+            <span data-i18n="route4Label">Chiba</span>
+            <h3 data-i18n="route4Title">Smart-city district management</h3>
+            <p data-i18n="route4Text">Kashiwa-no-ha Smart City tour and discussion at Kashiwa-no-ha Conference Center.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="logistics" class="logistics-section">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="logisticsKicker">Participant Notes</p>
+          <h2 data-i18n="logisticsTitle">Coordination checklist</h2>
+        </div>
+        <div class="logistics-grid">
+          <article>
+            <h3 data-i18n="logistics1Title">Travel Window</h3>
+            <p data-i18n="logistics1Text">Cairo departure is scheduled for June 16, arrival in Tokyo for June 17, and return travel begins June 27.</p>
+          </article>
+          <article>
+            <h3 data-i18n="logistics2Title">Working Base</h3>
+            <p data-i18n="logistics2Text">Most classroom sessions are at JICA Tokyo, with scheduled movement to ministries, operators, and field sites.</p>
+          </article>
+          <article>
+            <h3 data-i18n="logistics3Title">Preparation</h3>
+            <p data-i18n="logistics3Text">Bring project questions, corridor planning issues, and examples from Greater Cairo for the workshops and final presentations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div>
+          <p class="section-kicker" data-i18n="contactKicker">Coordination</p>
+          <h2 data-i18n="contactTitle">Prepare a participant email</h2>
+          <p data-i18n="contactText">
+            Use this helper to draft a quick note about travel status, organization, and any questions for the program
+            coordination team.
+          </p>
+        </div>
+        <form class="interest-form">
+          <label>
+            <span data-i18n="formName">Name</span>
+            <input type="text" name="name" placeholder="Participant name" data-i18n-placeholder="formNamePlaceholder" />
+          </label>
+          <label>
+            <span data-i18n="formOrg">Organization</span>
+            <input type="text" name="organization" placeholder="Agency or department" data-i18n-placeholder="formOrgPlaceholder" />
+          </label>
+          <label>
+            <span data-i18n="formEmail">Email</span>
+            <input type="email" name="email" placeholder="name@example.com" />
+          </label>
+          <label>
+            <span data-i18n="formNote">Coordination note</span>
+            <textarea name="message" rows="4" placeholder="Travel status, topic interest, or project question" data-i18n-placeholder="formNotePlaceholder"></textarea>
+          </label>
+          <button type="button" id="mailBtn" data-i18n="prepareEmail">Prepare Email</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span data-i18n="footerTitle">JICA Cairo Transport Strategy Japan Training</span>
+      <span data-i18n="footerNote">One-time training agenda, June 16-28, 2026</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
