@@ -111,15 +111,15 @@ const agenda = [
   {
     day: "Jun 19",
     date: "Fri, Jun 19",
-    theme: "National Planning Systems and Metropolitan Development",
-    summary: "National-level land use and transport strategy lectures, capital region planning, discussion, and stay allowance arrangements.",
+    theme: "National Planning Systems, Embassy Visit, and Administration",
+    summary: "National-level land use and transport strategy lectures, capital region planning, infrastructure information, Egyptian Embassy visit, and stay allowance arrangements.",
     location: "JICA Tokyo 403",
     sessions: [
       {
         time: "10:00-12:00",
         title: "Location Optimization Act and Urban/Regional Transport Strategy",
         body: "Examples of national-level land-use planning and policy.",
-        lead: "MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division",
+        lead: "Kaname Watanabe / Yasushi Kawai, MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division",
         place: "JICA Tokyo, Main Building 4F Room 403",
         type: "Lecture"
       },
@@ -132,10 +132,18 @@ const agenda = [
         type: "Meal"
       },
       {
-        time: "13:00-14:30",
+        time: "13:00-14:20",
         title: "Capital Region Development Plan",
         body: "Japan's policy direction for capital function relocation and capital region development.",
         lead: "Kyoko Itsuki, Senior Research Officer, Comprehensive Planning Division, MLIT National Spatial Planning and Regional Policy Bureau",
+        place: "JICA Tokyo, Main Building 4F Room 403",
+        type: "Lecture"
+      },
+      {
+        time: "14:20-14:30",
+        title: "Information on Infrastructure Development in Japan",
+        body: "Introduction to Japan's infrastructure development technologies.",
+        lead: "Hiroto Kojima, Assistant Director, Global Strategy Office, Policy Bureau, MLIT",
         place: "JICA Tokyo, Main Building 4F Room 403",
         type: "Lecture"
       },
@@ -148,15 +156,31 @@ const agenda = [
         type: "Break"
       },
       {
-        time: "14:40-15:10",
-        title: "Discussion",
+        time: "14:50-15:20",
+        title: "Transfer: JICA Tokyo to the Egyptian Embassy in Japan",
         body: "",
         lead: "",
         place: "Tokyo",
-        type: "Discussion"
+        type: "Transit"
       },
       {
         time: "15:30-16:30",
+        title: "Visit to the Egyptian Embassy in Japan",
+        body: "",
+        lead: "Egyptian Embassy in Japan",
+        place: "Egyptian Embassy in Japan",
+        type: "Visit"
+      },
+      {
+        time: "16:30-17:00",
+        title: "Transfer: Egyptian Embassy in Japan to Sumitomo Mitsui Banking Corporation ATM",
+        body: "",
+        lead: "",
+        place: "Tokyo",
+        type: "Transit"
+      },
+      {
+        time: "17:00-17:30",
         title: "Stay Allowance Withdrawal",
         body: "Administrative arrangement for stay allowance withdrawal.",
         lead: "",
@@ -212,7 +236,6 @@ const agenda = [
         body: "Planning-system design tailored to regional characteristics.",
         lead: "Fumihiko Seta, Associate Professor, Department of Urban Engineering, The University of Tokyo",
         place: "JICA Tokyo, Annex 1F Rooms C/D",
-        note: "JICA Tokyo Main Building 4F Room 403 is also waitlisted.",
         type: "Lecture"
       },
       {
@@ -276,29 +299,13 @@ const agenda = [
   {
     day: "Jun 23",
     date: "Tue, Jun 23",
-    theme: "Embassy Visit, Tokyu Railway, and TOD Field Learning",
-    summary: "Egyptian Embassy visit, Tokyu Railway lecture, and TOD site observations at Futako-Tamagawa and Tama-Plaza.",
+    theme: "Tokyu Railway and TOD Field Learning",
+    summary: "Tokyu Railway lecture and TOD site observations at Futako-Tamagawa and Tama-Plaza.",
     location: "Tokyo / Kanagawa",
     sessions: [
       {
-        time: "08:30-09:00",
-        title: "Bus Transfer: JICA Tokyo to the Embassy",
-        body: "",
-        lead: "",
-        place: "Tokyo",
-        type: "Transit"
-      },
-      {
-        time: "09:00-10:00",
-        title: "Visit to the Egyptian Embassy in Japan",
-        body: "",
-        lead: "Egyptian Embassy in Japan",
-        place: "Egyptian Embassy in Japan",
-        type: "Visit"
-      },
-      {
         time: "10:00-10:30",
-        title: "Bus Transfer: Embassy to Tokyu Corporation Headquarters",
+        title: "Bus Transfer: JICA Tokyo to Tokyu Corporation Headquarters",
         body: "",
         lead: "",
         place: "Tokyo",
@@ -317,7 +324,7 @@ const agenda = [
         title: "Lunch",
         body: "",
         lead: "",
-        place: "Box lunch in the Tokyu meeting room",
+        place: "Tokyo",
         type: "Meal"
       },
       {
@@ -398,7 +405,7 @@ const agenda = [
         time: "09:40-11:10",
         title: "JICA Initiatives in Urban and Transport Fields",
         body: "",
-        lead: "Misaki Funabashi, JICA Infrastructure Management Department, Urban and Regional Development Group",
+        lead: "Ryuhei Kondo, JICA Infrastructure Management Department, Urban and Regional Development Group",
         place: "JICA Headquarters",
         type: "Lecture"
       },
@@ -457,7 +464,6 @@ const agenda = [
         body: "Integrated promotion of residential land development and railway business along the Tsukuba Express Line, with development of a research and academic city.",
         lead: "Takehito Ito / Kenichi Kojima",
         place: "JICA Tokyo, Main Building 4F Room 403, online",
-        note: "The JICA Tokyo room has limited online-meeting equipment, mainly a web-conference microphone and speaker.",
         type: "Lecture"
       },
       {
@@ -477,7 +483,7 @@ const agenda = [
         type: "Meal"
       },
       {
-        time: "13:30-16:30",
+        time: "13:30-17:00",
         title: "Kashiwa-no-ha Smart City Site Visit",
         body: "Smart-city tour of about 120 minutes, followed by 30-60 minutes of Q&A and discussion with Mitsui Fudosan staff.",
         lead: "Toshiyuki Yamanaka / Hideaki Dazai, Mitsui Fudosan",
@@ -485,7 +491,7 @@ const agenda = [
         type: "Visit"
       },
       {
-        time: "16:30-18:00",
+        time: "17:00-18:00",
         title: "Bus Transfer: Kashiwa-no-ha to JICA Tokyo",
         body: "",
         lead: "",
@@ -602,6 +608,8 @@ const searchInput = document.querySelector("#agendaSearch");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const countdownValue = document.querySelector("#countdownValue");
 const countdownLabel = document.querySelector("#countdownLabel");
+const currentDateTime = document.querySelector("#currentDateTime");
+const cairoDateTime = document.querySelector("#cairoDateTime");
 const printBtn = document.querySelector("#printBtn");
 const languageButtons = document.querySelectorAll("[data-lang]");
 
@@ -739,6 +747,13 @@ const uiText = {
     note: "Note",
     daysToStart: "days to start",
     dayToStart: "day to start",
+    startsIn: "starts in",
+    currentJapanTime: "Japan time",
+    currentCairoTime: "Cairo time",
+    dayShort: "d",
+    hourShort: "h",
+    minuteShort: "m",
+    secondShort: "s",
     live: "Live",
     programWindow: "program window",
     mailSubject: "JICA Cairo Transport Strategy Japan Training - Coordination Note",
@@ -845,6 +860,13 @@ const uiText = {
     note: "備考",
     daysToStart: "開始までの日数",
     dayToStart: "開始まで1日",
+    startsIn: "開始まで",
+    currentJapanTime: "日本時間",
+    currentCairoTime: "カイロ時間",
+    dayShort: "日",
+    hourShort: "時間",
+    minuteShort: "分",
+    secondShort: "秒",
     live: "実施中",
     programWindow: "研修期間",
     mailSubject: "JICA大カイロ交通戦略本邦研修 - 連絡事項",
@@ -951,6 +973,13 @@ const uiText = {
     note: "ملاحظة",
     daysToStart: "يوما حتى البداية",
     dayToStart: "يوم واحد حتى البداية",
+    startsIn: "يبدأ بعد",
+    currentJapanTime: "توقيت اليابان",
+    currentCairoTime: "توقيت القاهرة",
+    dayShort: "ي",
+    hourShort: "س",
+    minuteShort: "د",
+    secondShort: "ث",
     live: "جار الآن",
     programWindow: "فترة البرنامج",
     mailSubject: "تدريب جايكا لاستراتيجية النقل في القاهرة الكبرى - ملاحظة تنسيقية",
@@ -983,9 +1012,10 @@ const phraseText = {
     "Arrival in Tokyo": "東京到着",
     "Briefing, Orientation, and Kansai Transport Policy": "ブリーフィング、オリエンテーション、関西都市圏交通政策",
     "National Planning Systems and Metropolitan Development": "国土計画制度と都市圏整備",
+    "National Planning Systems, Embassy Visit, and Administration": "国土計画制度、大使館訪問、事務手続き",
     "Holiday": "休日",
     "Tokyo Metropolitan Planning and PCKK Workshop": "東京都市圏計画とPCKKワークショップ",
-    "Embassy Visit, Tokyu Railway, and TOD Field Learning": "大使館訪問、東急鉄道、TOD視察",
+    "Tokyu Railway and TOD Field Learning": "東急鉄道とTOD視察",
     "JICA Headquarters and Yokohama Transit Development": "JICA本部と横浜交通開発",
     "Tsukuba Express and Kashiwa-no-ha Smart City": "つくばエクスプレスと柏の葉スマートシティ",
     "Reflection, Presentations, and Closing": "振り返り、発表、閉講",
@@ -994,10 +1024,11 @@ const phraseText = {
     "Participants depart Cairo and travel via the transit city toward Japan.": "参加者はカイロを出発し、経由地を通って日本へ向かいます。",
     "Participants arrive in Japan from the transit city.": "参加者は経由地から日本に到着します。",
     "Arrival briefing, program orientation, lecture on Kansai metropolitan transport planning, and first workshop.": "来日ブリーフィング、プログラムオリエンテーション、関西都市圏交通計画の講義、初回ワークショップを行います。",
-    "National-level land use and transport strategy lectures, capital region planning, discussion, and stay allowance arrangements.": "国レベルの土地利用・交通戦略、首都圏整備計画、討議、滞在費手続きに関する日です。",
+    "National-level land use and transport strategy lectures, capital region planning, infrastructure information, Egyptian Embassy visit, and stay allowance arrangements.": "国レベルの土地利用・交通戦略、首都圏整備計画、インフラ情報提供、在日エジプト大使館訪問、滞在費手続きに関する日です。",
     "No formal training sessions are scheduled.": "正式な研修予定はありません。",
     "Urban and transport planning lecture, Tokyo Metropolitan Government visit, PCKK workshop, and networking event.": "都市・交通計画の講義、東京都庁訪問、PCKKワークショップ、懇親会を行います。",
     "Egyptian Embassy visit, Tokyu Railway lecture, and TOD site observations at Futako-Tamagawa and Tama-Plaza.": "在日エジプト大使館訪問、東急鉄道の講義、二子玉川とたまプラーザのTOD視察を行います。",
+    "Tokyu Railway lecture and TOD site observations at Futako-Tamagawa and Tama-Plaza.": "東急鉄道の講義、二子玉川とたまプラーザのTOD視察を行います。",
     "JICA headquarters visit, JICA urban and transport initiatives, Minatomirai Line financing and integrated station development, and Yokohama field visit.": "JICA本部訪問、JICAの都市・交通分野の取り組み、みなとみらい線の資金調達と駅一体開発、横浜視察を行います。",
     "Rail-oriented urban development lecture and Kashiwa-no-ha Smart City field visit.": "鉄道沿線まちづくりの講義と柏の葉スマートシティ視察を行います。",
     "Training reflection, workshop, team presentations, evaluation meeting, and closing ceremony.": "研修の振り返り、ワークショップ、チーム発表、評価会、閉講式を行います。",
@@ -1031,18 +1062,23 @@ const phraseText = {
     "Location Optimization Act and Urban/Regional Transport Strategy": "立地適正化法と都市・地域総合交通戦略",
     "Examples of national-level land-use planning and policy.": "国レベルの土地利用計画・政策の事例。",
     "MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division": "国土交通省 都市局 街路交通施設課／都市計画課",
+    "Kaname Watanabe / Yasushi Kawai, MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division": "渡邊枢／河合泰志、国土交通省 都市局 街路交通施設課／都市計画課",
     "Capital Region Development Plan": "首都圏整備計画",
     "Japan's policy direction for capital function relocation and capital region development.": "首都機能移転と首都圏整備に関する日本の方針。",
     "Kyoko Itsuki, Senior Research Officer, Comprehensive Planning Division, MLIT National Spatial Planning and Regional Policy Bureau": "伊月恭子、国土交通省国土政策局総合計画課 専門調査官",
+    "Information on Infrastructure Development in Japan": "日本のインフラ整備に関する情報提供",
+    "Introduction to Japan's infrastructure development technologies.": "日本におけるインフラ整備技術の紹介。",
+    "Hiroto Kojima, Assistant Director, Global Strategy Office, Policy Bureau, MLIT": "小島洋人、国土交通省総合政策局グローバル参事官室 課長補佐",
     "Discussion": "ディスカッション",
     "Stay Allowance Withdrawal": "滞在費の引き落とし",
     "Administrative arrangement for stay allowance withdrawal.": "滞在費引き落としのための事務手続き。",
+    "Transfer: JICA Tokyo to the Egyptian Embassy in Japan": "移動：JICA東京から在日エジプト大使館へ",
+    "Transfer: Egyptian Embassy in Japan to Sumitomo Mitsui Banking Corporation ATM": "移動：在日エジプト大使館から三井住友銀行ATMへ",
     "Rest Day": "休日",
     "Integrated Urban and Transport Planning for the Capital Region": "首都圏の都市・交通の一体的な計画策定",
     "Planning-system design tailored to regional characteristics.": "地域特性に応じた計画制度設計。",
     "Fumihiko Seta, Associate Professor, Department of Urban Engineering, The University of Tokyo": "瀬田史彦、東京大学大学院工学系研究科都市工学専攻 准教授",
     "JICA Tokyo, Annex 1F Rooms C/D": "JICA東京 別館1階C/D",
-    "JICA Tokyo Main Building 4F Room 403 is also waitlisted.": "JICA東京本館4階403号室もキャンセル待ち中です。",
     "Bus Transfer: JICA Tokyo to Tokyo Metropolitan Government": "バス移動：JICA東京から東京都庁へ",
     "Promotion of Tokyo's Comprehensive Transport Policy": "東京都の総合的な交通政策の推進",
     "Examples of transport policies and measures in a major metropolitan area.": "大都市圏における交通政策および施策の推進事例。",
@@ -1058,11 +1094,11 @@ const phraseText = {
     "Visit to the Egyptian Embassy in Japan": "在日エジプト大使館訪問",
     "Egyptian Embassy in Japan": "在日エジプト大使館",
     "Bus Transfer: Embassy to Tokyu Corporation Headquarters": "バス移動：大使館から東急電鉄本社へ",
+    "Bus Transfer: JICA Tokyo to Tokyu Corporation Headquarters": "バス移動：JICA東京から東急電鉄本社へ",
     "Den-en-toshi Line and Next-Generation Suburban Town Development": "田園都市線沿線と次世代郊外まちづくり",
     "Promotion of residential land development and town development centered on railway stations.": "鉄道駅を中心とした宅地開発とまちづくりの推進。",
     "Tomoyuki Yamashita / Toshio Kajitani, Tokyu Corporation": "山下智幸／梶谷俊夫、東急電鉄",
     "Tokyu Corporation Headquarters, Shibuya": "東急電鉄本社（渋谷）",
-    "Box lunch in the Tokyu meeting room": "東急会議室内で弁当",
     "Bus Transfer: Shibuya to Futako-Tamagawa Station": "バス移動：渋谷から二子玉川駅へ",
     "Futako-Tamagawa TOD Site Visit": "二子玉川TOD視察",
     "Toshio Kajitani, Tokyu Corporation": "梶谷俊夫、東急電鉄",
@@ -1078,7 +1114,7 @@ const phraseText = {
     "JICA Headquarters": "JICA本部",
     "The headquarters meeting room reservation is handled separately.": "本部会議室の予約は別途調整されています。",
     "JICA Initiatives in Urban and Transport Fields": "都市・交通分野におけるJICAの取り組み",
-    "Misaki Funabashi, JICA Infrastructure Management Department, Urban and Regional Development Group": "船橋岬、JICA社会基盤部 都市・地域開発グループ",
+    "Ryuhei Kondo, JICA Infrastructure Management Department, Urban and Regional Development Group": "近藤竜平、JICA社会基盤部 都市・地域開発グループ",
     "Bus Transfer: JICA Headquarters to Shin-Takashima": "バス移動：JICA本部から新高島へ",
     "Development of the Minatomirai Line": "みなとみらい線の整備",
     "Examples of financing schemes through operator coordination, integrated development of stations and surrounding buildings, and project cost reduction.": "事業者との連携による資金調達、駅と周辺建物の一体整備、事業費縮減の事例。",
@@ -1093,7 +1129,6 @@ const phraseText = {
     "Integrated promotion of residential land development and railway business along the Tsukuba Express Line, with development of a research and academic city.": "つくばエクスプレス沿線における宅地開発と鉄道事業の一体的推進、研究学園都市の開発。",
     "Takehito Ito / Kenichi Kojima": "伊藤豪人／小島謙一",
     "JICA Tokyo, Main Building 4F Room 403, online": "JICA東京 本館4階403号室、オンライン",
-    "The JICA Tokyo room has limited online-meeting equipment, mainly a web-conference microphone and speaker.": "JICA東京の会場はオンライン設備が限られており、主にウェブ会議用マイクスピーカーのみです。",
     "Bus Transfer: JICA Tokyo to Kashiwa-no-ha Campus Station": "バス移動：JICA東京から柏の葉キャンパス駅へ",
     "Chiba": "千葉",
     "Lunch, TBD": "昼食（未定）",
@@ -1149,9 +1184,10 @@ const phraseText = {
     "Arrival in Tokyo": "الوصول إلى طوكيو",
     "Briefing, Orientation, and Kansai Transport Policy": "إحاطة وتعريف وسياسات النقل في كانساي",
     "National Planning Systems and Metropolitan Development": "أنظمة التخطيط الوطنية والتنمية الحضرية",
+    "National Planning Systems, Embassy Visit, and Administration": "أنظمة التخطيط الوطنية وزيارة السفارة والإجراءات الإدارية",
     "Holiday": "يوم راحة",
     "Tokyo Metropolitan Planning and PCKK Workshop": "تخطيط طوكيو الحضرية وورشة PCKK",
-    "Embassy Visit, Tokyu Railway, and TOD Field Learning": "زيارة السفارة وتوكيو للسكك الحديدية والتعلم الميداني حول TOD",
+    "Tokyu Railway and TOD Field Learning": "سكة حديد توكيو والتعلم الميداني حول TOD",
     "JICA Headquarters and Yokohama Transit Development": "مقر جايكا وتطوير النقل في يوكوهاما",
     "Tsukuba Express and Kashiwa-no-ha Smart City": "تسوكوبا إكسبريس ومدينة كاشيوا-نو-ها الذكية",
     "Reflection, Presentations, and Closing": "مراجعة وعروض وختام",
@@ -1160,10 +1196,11 @@ const phraseText = {
     "Participants depart Cairo and travel via the transit city toward Japan.": "يغادر المشاركون القاهرة ويتجهون إلى اليابان عبر مدينة العبور.",
     "Participants arrive in Japan from the transit city.": "يصل المشاركون إلى اليابان من مدينة العبور.",
     "Arrival briefing, program orientation, lecture on Kansai metropolitan transport planning, and first workshop.": "إحاطة الوصول، وتعريف بالبرنامج، ومحاضرة عن تخطيط النقل في منطقة كانساي، وورشة العمل الأولى.",
-    "National-level land use and transport strategy lectures, capital region planning, discussion, and stay allowance arrangements.": "محاضرات عن استخدامات الأراضي واستراتيجية النقل على المستوى الوطني، وتخطيط منطقة العاصمة، ونقاشات وترتيبات بدل الإقامة.",
+    "National-level land use and transport strategy lectures, capital region planning, infrastructure information, Egyptian Embassy visit, and stay allowance arrangements.": "محاضرات عن استخدامات الأراضي واستراتيجية النقل على المستوى الوطني، وتخطيط منطقة العاصمة، ومعلومات عن البنية التحتية، وزيارة السفارة المصرية، وترتيبات بدل الإقامة.",
     "No formal training sessions are scheduled.": "لا توجد جلسات تدريب رسمية مقررة.",
     "Urban and transport planning lecture, Tokyo Metropolitan Government visit, PCKK workshop, and networking event.": "محاضرة عن التخطيط الحضري والنقل، وزيارة حكومة طوكيو، وورشة PCKK، وفعالية تواصل.",
     "Egyptian Embassy visit, Tokyu Railway lecture, and TOD site observations at Futako-Tamagawa and Tama-Plaza.": "زيارة السفارة المصرية، ومحاضرة توكيو للسكك الحديدية، وملاحظات ميدانية في فوتاكو-تاماغاوا وتاما-بلازا.",
+    "Tokyu Railway lecture and TOD site observations at Futako-Tamagawa and Tama-Plaza.": "محاضرة توكيو للسكك الحديدية وزيارات ميدانية لمواقع TOD في فوتاكو-تاماغاوا وتاما-بلازا.",
     "JICA headquarters visit, JICA urban and transport initiatives, Minatomirai Line financing and integrated station development, and Yokohama field visit.": "زيارة مقر جايكا، ومبادرات جايكا في المدن والنقل، وتمويل خط ميناتوميراي وتطوير المحطات المتكامل، وزيارة ميدانية في يوكوهاما.",
     "Rail-oriented urban development lecture and Kashiwa-no-ha Smart City field visit.": "محاضرة عن التنمية الحضرية المرتبطة بالسكك الحديدية وزيارة ميدانية لمدينة كاشيوا-نو-ها الذكية.",
     "Training reflection, workshop, team presentations, evaluation meeting, and closing ceremony.": "مراجعة التدريب، وورشة عمل، وعروض الفرق، واجتماع تقييم، وحفل ختامي.",
@@ -1197,9 +1234,13 @@ const phraseText = {
     "Location Optimization Act and Urban/Regional Transport Strategy": "قانون تحسين المواقع واستراتيجية النقل الحضري والإقليمي",
     "Examples of national-level land-use planning and policy.": "أمثلة على تخطيط وسياسات استخدامات الأراضي على المستوى الوطني.",
     "MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division": "وزارة الأراضي والبنية التحتية والنقل والسياحة، مكتب المدن",
+    "Kaname Watanabe / Yasushi Kawai, MLIT Urban Bureau, Street and Transport Facilities Division / City Planning Division": "كانامي واتانابي / ياسوشي كاواي، وزارة الأراضي والبنية التحتية والنقل والسياحة، مكتب المدن",
     "Capital Region Development Plan": "خطة تطوير منطقة العاصمة",
     "Japan's policy direction for capital function relocation and capital region development.": "اتجاه سياسة اليابان لنقل وظائف العاصمة وتنمية منطقة العاصمة.",
     "Kyoko Itsuki, Senior Research Officer, Comprehensive Planning Division, MLIT National Spatial Planning and Regional Policy Bureau": "كيوكو إيتسوكي، وزارة الأراضي والبنية التحتية والنقل والسياحة",
+    "Information on Infrastructure Development in Japan": "معلومات عن تطوير البنية التحتية في اليابان",
+    "Introduction to Japan's infrastructure development technologies.": "تعريف بتقنيات تطوير البنية التحتية في اليابان.",
+    "Hiroto Kojima, Assistant Director, Global Strategy Office, Policy Bureau, MLIT": "هيروتو كوجيما، مساعد مدير، مكتب الاستراتيجية العالمية، مكتب السياسات، وزارة الأراضي والبنية التحتية والنقل والسياحة",
     "Discussion": "نقاش",
     "Stay Allowance Withdrawal": "سحب بدل الإقامة",
     "Administrative arrangement for stay allowance withdrawal.": "إجراء إداري لسحب بدل الإقامة.",
@@ -1208,7 +1249,6 @@ const phraseText = {
     "Planning-system design tailored to regional characteristics.": "تصميم نظام تخطيط ملائم للخصائص الإقليمية.",
     "Fumihiko Seta, Associate Professor, Department of Urban Engineering, The University of Tokyo": "فوميهكو سيتا، أستاذ مشارك، جامعة طوكيو",
     "JICA Tokyo, Annex 1F Rooms C/D": "جايكا طوكيو، الملحق، الطابق الأول، قاعتان C/D",
-    "JICA Tokyo Main Building 4F Room 403 is also waitlisted.": "قاعة 403 في المبنى الرئيسي لجايكا طوكيو على قائمة الانتظار أيضا.",
     "Bus Transfer: JICA Tokyo to Tokyo Metropolitan Government": "انتقال بالحافلة: جايكا طوكيو إلى حكومة طوكيو الحضرية",
     "Promotion of Tokyo's Comprehensive Transport Policy": "تعزيز سياسة النقل الشاملة في طوكيو",
     "Examples of transport policies and measures in a major metropolitan area.": "أمثلة على سياسات وإجراءات النقل في منطقة حضرية كبرى.",
@@ -1221,14 +1261,16 @@ const phraseText = {
     "Networking Reception": "استقبال للتعارف",
     "Transfer: PCKK to JICA Tokyo": "انتقال: PCKK إلى جايكا طوكيو",
     "Bus Transfer: JICA Tokyo to the Embassy": "انتقال بالحافلة: جايكا طوكيو إلى السفارة",
+    "Transfer: JICA Tokyo to the Egyptian Embassy in Japan": "انتقال: جايكا طوكيو إلى السفارة المصرية في اليابان",
     "Visit to the Egyptian Embassy in Japan": "زيارة السفارة المصرية في اليابان",
     "Egyptian Embassy in Japan": "السفارة المصرية في اليابان",
+    "Transfer: Egyptian Embassy in Japan to Sumitomo Mitsui Banking Corporation ATM": "انتقال: السفارة المصرية في اليابان إلى ماكينة صراف آلي لبنك سوميتومو ميتسوي",
     "Bus Transfer: Embassy to Tokyu Corporation Headquarters": "انتقال بالحافلة: السفارة إلى مقر شركة توكيو",
+    "Bus Transfer: JICA Tokyo to Tokyu Corporation Headquarters": "انتقال بالحافلة: جايكا طوكيو إلى مقر شركة توكيو",
     "Den-en-toshi Line and Next-Generation Suburban Town Development": "خط دين-إن-توشي وتطوير الضواحي من الجيل التالي",
     "Promotion of residential land development and town development centered on railway stations.": "تعزيز تطوير الأراضي السكنية وتنمية المدن حول محطات السكك الحديدية.",
     "Tomoyuki Yamashita / Toshio Kajitani, Tokyu Corporation": "تومويوكي ياماشيتا / توشيو كاجيتاني، شركة توكيو",
     "Tokyu Corporation Headquarters, Shibuya": "مقر شركة توكيو، شيبويا",
-    "Box lunch in the Tokyu meeting room": "غداء صندوقي في قاعة اجتماعات توكيو",
     "Bus Transfer: Shibuya to Futako-Tamagawa Station": "انتقال بالحافلة: شيبويا إلى محطة فوتاكو-تاماغاوا",
     "Futako-Tamagawa TOD Site Visit": "زيارة موقع TOD في فوتاكو-تاماغاوا",
     "Toshio Kajitani, Tokyu Corporation": "توشيو كاجيتاني، شركة توكيو",
@@ -1244,7 +1286,7 @@ const phraseText = {
     "JICA Headquarters": "مقر جايكا",
     "The headquarters meeting room reservation is handled separately.": "يتم تنسيق حجز قاعة الاجتماع في المقر بشكل منفصل.",
     "JICA Initiatives in Urban and Transport Fields": "مبادرات جايكا في مجالي المدن والنقل",
-    "Misaki Funabashi, JICA Infrastructure Management Department, Urban and Regional Development Group": "ميساكي فوناباشي، جايكا",
+    "Ryuhei Kondo, JICA Infrastructure Management Department, Urban and Regional Development Group": "ريوهي كوندو، جايكا، إدارة البنية التحتية، مجموعة التنمية الحضرية والإقليمية",
     "Bus Transfer: JICA Headquarters to Shin-Takashima": "انتقال بالحافلة: مقر جايكا إلى شين-تاكاشيما",
     "Development of the Minatomirai Line": "تطوير خط ميناتوميراي",
     "Examples of financing schemes through operator coordination, integrated development of stations and surrounding buildings, and project cost reduction.": "أمثلة على آليات التمويل من خلال التنسيق مع المشغلين، والتطوير المتكامل للمحطات والمباني المحيطة، وخفض تكلفة المشروع.",
@@ -1259,7 +1301,6 @@ const phraseText = {
     "Integrated promotion of residential land development and railway business along the Tsukuba Express Line, with development of a research and academic city.": "تعزيز متكامل لتطوير الأراضي السكنية وأعمال السكك الحديدية على امتداد تسوكوبا إكسبريس مع تطوير مدينة بحثية وأكاديمية.",
     "Takehito Ito / Kenichi Kojima": "تاكيهيتو إيتو / كينيتشي كوجيما",
     "JICA Tokyo, Main Building 4F Room 403, online": "جايكا طوكيو، المبنى الرئيسي، الطابق الرابع، قاعة 403، عبر الإنترنت",
-    "The JICA Tokyo room has limited online-meeting equipment, mainly a web-conference microphone and speaker.": "تتوفر في القاعة معدات محدودة للاجتماعات عبر الإنترنت، أساسا ميكروفون وسماعة للمؤتمرات.",
     "Bus Transfer: JICA Tokyo to Kashiwa-no-ha Campus Station": "انتقال بالحافلة: جايكا طوكيو إلى محطة كاشيوا-نو-ها كامبس",
     "Chiba": "تشيبا",
     "Lunch, TBD": "غداء، يحدد لاحقا",
@@ -1303,7 +1344,7 @@ function init() {
   renderTabs();
   renderAgenda();
   updateCountdown();
-  window.setInterval(updateCountdown, 60 * 60 * 1000);
+  window.setInterval(updateCountdown, 1000);
   document.querySelector("#mailBtn").addEventListener("click", prepareEmail);
   searchInput?.addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
@@ -1542,6 +1583,33 @@ function tx(value) {
 function updateCountdown() {
   const now = new Date();
   const diff = eventStart.getTime() - now.getTime();
+  const locale = getLocale();
+
+  const timeFormatOptions = {
+    weekday: "short",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  };
+
+  if (currentDateTime) {
+    const currentJapan = new Intl.DateTimeFormat(locale, {
+      timeZone: "Asia/Tokyo",
+      ...timeFormatOptions
+    }).format(now);
+    currentDateTime.textContent = `${t("currentJapanTime")}: ${currentJapan}`;
+  }
+
+  if (cairoDateTime) {
+    const currentCairo = new Intl.DateTimeFormat(locale, {
+      timeZone: "Africa/Cairo",
+      ...timeFormatOptions
+    }).format(now);
+    cairoDateTime.textContent = `${t("currentCairoTime")}: ${currentCairo}`;
+  }
 
   if (diff <= 0) {
     countdownValue.textContent = t("live");
@@ -1549,9 +1617,29 @@ function updateCountdown() {
     return;
   }
 
-  const days = Math.ceil(diff / 86400000);
-  countdownValue.textContent = days;
-  countdownLabel.textContent = days === 1 ? t("dayToStart") : t("daysToStart");
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  countdownValue.textContent = [
+    `${days}${t("dayShort")}`,
+    `${padTime(hours)}${t("hourShort")}`,
+    `${padTime(minutes)}${t("minuteShort")}`,
+    `${padTime(seconds)}${t("secondShort")}`
+  ].join(" ");
+  countdownLabel.textContent = t("startsIn");
+}
+
+function padTime(value) {
+  return String(value).padStart(2, "0");
+}
+
+function getLocale() {
+  if (state.lang === "ja") return "ja-JP";
+  if (state.lang === "ar") return "ar-EG";
+  return "en-US";
 }
 
 function prepareEmail() {
